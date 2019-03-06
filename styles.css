@@ -1,0 +1,34 @@
+#wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+
+fieldset {
+    background: lightyellow;
+    border: 10px solid yellow;
+    margin-bottom: 10px;
+    width: 720px;
+}
+#preview {
+    width: 100px; }
+
+label{
+width: 180px;
+display: inline-block;
+text-align: top,right;
+}
+
+#gender1,#gender2,#mail, #whatsapp, #inApp{
+    width: auto;
+}
+
+#rng{
+    text-align: center;
+}
+
+textarea{
+    width: 360px;
+    height: 50px;
+}
+/* label:hover { font-size:40px } */
+/* input:hover { font-size:40px } */

@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Dating website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+
+</head>
+
+<body>
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" media="screen" /> -->
+
+    <div id="wrapper">
+        <div id="result">
+            <form class="results" action="index.html" method="post">
+                <fieldset>
+                    <legend> Results </legend>
+                    <table id="display-results">
+                        <!-- Results will be displayed here through Javascript -->
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        <h1>
+            Please enter your details for our dating website!
+        </h1>
+
+        <form name="webForm" action="" method="GET">
+
+            <fieldset>
+                <legend>Your face</legend>
+                <label for="image">Your image:</label>
+                <input type="file" id="imgFile" name="yourPicture" required>
+                <br>
+                <label for="showPic">Image preview:</label>
+                <img id="preview" src="http://placehold.it/100" name="viewImg">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your general details</legend>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Your full name" id="name" name="yourName" required>
+                <br>
+                <label for="gender">Gender:</label>
+                <input type="radio" value="male" name="yourGender">Male
+                <input type="radio" value="female" name="yourGender">Female
+                <br>
+                <label for="age">Age</label>
+                <input type="number" id="years" name="yourAge" value='18' required>
+                <br>
+                <label for="birthday">Date of birth:</label>
+                <input type="date" id="birthDate" name="yourBirthday" value="" required>
+                <br>
+                <label for="pickFavColor">Favorite color:</label>
+                <input type="color" id="colorpicker" name="yourColor">
+                <br>
+                <label for="homeland">Which country:</label>
+                <select id="origin" name="yourHomeCountry" required>
+                    <option> </option>
+                    <option> America </option>
+                    <option> Iceland </option>
+                    <option> Greenland</option>
+                    <option> Australia</option>
+                    <option> Canada </option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your indicators:</legend>
+                <label for="height" id="rng">Height:</label>
+                <label for="indicatorShort" id="rng">Short</label>
+                <input type="range" min="0" max="100" id="height" name="yourHeight">
+                <label for="indicatorTall" id="rng">Tall</label>
+                <label for="income" id="rng">Salary:</label>
+                <label for="indicatorLow" id="rng">Low</label>
+                <input type="range" min="0" max="100" id="income" name="yourIncome">
+                <label for="indicatorHigh" id="rng">High</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    Your contact information:
+                </legend>
+                <label for="email">Email:</label>
+                <input type="email" id="emailAddress" name="yourEmail" required>
+                <label for="phoneNumber">Mobile:</label>
+                <input type="tel" id="telNum" name="yourPhoneNumber" required>
+                <label for="address">Address:</label>
+                <textarea id="inputAddress" name="yourAddress"></textarea>
+                <label for="contactMethod">Method to contact you:</label>
+                <input type="checkbox" id="mail" name="chooseEmail"> Email
+                <input type="checkbox" id="whatsapp" name="chooseWhatsApp"> WhatsApp
+                <input type="checkbox" id="inApp" name="chooseInApp"> In-app chat
+            </fieldset>
+
+        </form>
+        <input type="submit" name="submit" value="Submit" onclick="userInput()">
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
